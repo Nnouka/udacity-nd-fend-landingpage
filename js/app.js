@@ -48,7 +48,7 @@ function MenuLink({ label, href, onClick }) {
         onClick?.();
     });
     link.classList.add('menu__link');
-    link.append(label);
+    link.innerHTML = label;
     return link;
 }
 /**
@@ -56,7 +56,7 @@ function MenuLink({ label, href, onClick }) {
  */
 function MenuItem({ label, href, onClick }) {
     const item = document.createElement('li');
-    item.appendChild(MenuLink({ label, href, onClick }));
+    item.append(MenuLink({ label, href, onClick }));
     return item;
 }
 
