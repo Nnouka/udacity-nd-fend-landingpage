@@ -15,6 +15,8 @@
 
 [View app.js](./js/app.js)
 
+[preview langing page](https://nnouka.github.io/udacity-nd-fend-landingpage)
+
 © [UDACITY](https://udacity.com)
 
 
