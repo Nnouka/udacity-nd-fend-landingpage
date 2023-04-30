@@ -106,6 +106,7 @@ function showHideHeader() {
 function addActiveClasses() {
     // get the least y > 0;
     const toArr = Array.prototype.slice.call(store.sections);
+    // sort by y position
     toArr.sort(function (a, b) {
         const aR = a.getBoundingClientRect();
         const bR = b.getBoundingClientRect();
@@ -116,8 +117,8 @@ function addActiveClasses() {
         else if (aY < 0) return 1;
         else if (bY < 0) return -1;
         else if (aY < bY) return -1;
-
     });
+    // first is active
     toArr.forEach((s, i) => {
         if (i == 0) {
             s.classList.add('active-section');
